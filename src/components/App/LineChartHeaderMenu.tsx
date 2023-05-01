@@ -69,17 +69,12 @@ export default function SplitButton() {
           paddingTop: "4px",
           paddingBottom: "4px",
           paddingLeft: "8px",
-          paddingRight: "8px",
         }}
+        endIcon={<ArrowDropDownIcon />}
         ref={anchorRef}
         onClick={handleToggle}
       >
         {options[selectedIndex]}
-        <ArrowDropDownIcon
-          sx={{
-            marginLeft: "8px",
-          }}
-        />
       </Button>
       <Popper
         sx={{

@@ -88,7 +88,8 @@ export default function PieChartCard() {
                   sx={{
                     color: "#fff",
                   }}
-                  onClick={() => setActiveIndex(index)}
+                  onMouseOver={() => setActiveIndex(index)}
+                  onMouseLeave={() => setActiveIndex(-1)}
                 >
                   <Typography variant="subtitle2">{entry.name}</Typography>
                 </Button>

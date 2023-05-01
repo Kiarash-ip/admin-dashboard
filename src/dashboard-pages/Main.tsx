@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import CardComp from "../components/App/CardComp";
 import PieChartCard from "../components/App/PieChartCard";
 import LineChartCard from "../components/App/LineChartCard";
+import Invoice from "../components/App/Invoice";
 
 export default function Main() {
   return (
@@ -16,6 +17,7 @@ export default function Main() {
       <CardComp />
       <PieChartCard />
       <LineChartCard />
+      <Invoice />
     </Grid>
   );
 }

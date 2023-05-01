@@ -11,6 +11,7 @@ export default function LineChartCard() {
       <CustomPaper
         extraStyles={{
           flexDirection: "column",
+          paddingBottom: "45px",
         }}
       >
         <>

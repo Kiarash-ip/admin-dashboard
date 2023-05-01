@@ -50,7 +50,8 @@ export default function CustomPieChart({
                 }
                 onMouseOver={() => setActiveHover(index)}
                 onMouseLeave={() => setActiveHover(-1)}
-                strokeWidth={0}
+                strokeWidth={activeHover === index ? 5 : 0}
+                stroke={colors[index].color}
                 onClick={(e) => {
                   console.log(e);
                 }}

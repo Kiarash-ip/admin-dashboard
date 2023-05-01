@@ -121,3 +121,26 @@ export const pieChartData: PieChart[] = [
   { name: "IOS", value: 300 },
   { name: "Android", value: 200 },
 ];
+
+export const dashboardAppInvoices = [
+  {
+    id: 0,
+    title: "Invoice ID",
+  },
+  {
+    id: 1,
+    title: "Category",
+  },
+  {
+    id: 2,
+    title: "Price",
+  },
+  {
+    id: 3,
+    title: "Status",
+  },
+  {
+    id: 4,
+    title: "",
+  },
+];

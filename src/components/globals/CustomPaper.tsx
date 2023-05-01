@@ -1,9 +1,12 @@
 import React, { ReactElement } from "react";
-import { styled, SxProps } from "@mui/material/styles";
+import { styled, SxProps, useTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import { tokens } from "../../theme";
 
-const CustomCard = styled(Paper)(({ theme }) => ({
-  backgroundColor: "rgb(33, 43, 54)",
+const CustomCard = styled(Paper, {
+  shouldForwardProp: (props) => props !== "bgColor",
+})<{ bgColor: string }>(({ theme, bgColor }) => ({
+  backgroundColor: bgColor,
   color: "rgb(255, 255, 255)",
   transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
   backgroundImage: "none",
@@ -23,5 +26,11 @@ interface Props {
 }
 
 export default function CustomPaper({ children, extraStyles = {} }: Props) {
-  return <CustomCard sx={extraStyles}>{children}</CustomCard>;
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  return (
+    <CustomCard sx={extraStyles} bgColor={colors.primary[400]}>
+      {children}
+    </CustomCard>
+  );
 }
