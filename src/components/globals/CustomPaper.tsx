@@ -16,7 +16,6 @@ const CustomCard = styled(Paper, {
     "rgba(0, 0, 0, 0.2) 0px 0px 2px 0px, rgba(0, 0, 0, 0.12) 0px 12px 24px -4px",
   borderRadius: "16px",
   zIndex: "0",
-  display: "flex",
   alignItems: "center",
 }));
 

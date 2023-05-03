@@ -10,13 +10,13 @@ export default function LineChartCard() {
     <Grid item md={8}>
       <CustomPaper
         extraStyles={{
-          flexDirection: "column",
+          display: "block",
           paddingBottom: "45px",
         }}
       >
         <>
           <CardHeader
-            sx={{ padding: "24px 24px 0 24px", alignSelf: "stretch" }}
+            sx={{ padding: "24px 24px 0 24px" }}
             title="Area Installed"
             subheader="(+43%) than last year"
             action={<SplitButton />}

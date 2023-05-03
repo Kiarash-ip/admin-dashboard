@@ -4,6 +4,9 @@ import CardComp from "../components/App/CardComp";
 import PieChartCard from "../components/App/PieChartCard";
 import LineChartCard from "../components/App/LineChartCard";
 import Invoice from "../components/App/Invoice";
+import ApplicationsListCard from "../components/App/ApplicationsListCard";
+import CountiesInformationCard from "../components/App/CountiesInformationCard";
+import AuthorsListCard from "../components/App/AuthorsListCard";
 
 export default function Main() {
   return (
@@ -18,6 +21,9 @@ export default function Main() {
       <PieChartCard />
       <LineChartCard />
       <Invoice />
+      <ApplicationsListCard />
+      <CountiesInformationCard />
+      <AuthorsListCard />
     </Grid>
   );
 }

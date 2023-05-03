@@ -44,6 +44,7 @@ export default function PieChartCard() {
     <Grid item md={4}>
       <CustomPaper
         extraStyles={{
+          display: "flex",
           flexDirection: "column",
         }}
       >

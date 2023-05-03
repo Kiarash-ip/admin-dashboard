@@ -88,7 +88,7 @@ export default function CustomLineChart() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <div style={{ width: "100%", minHeight: "379px" }}>
+    <div style={{ width: "100%", height: "379px" }}>
       <ResponsiveContainer>
         <LineChart
           width={500}

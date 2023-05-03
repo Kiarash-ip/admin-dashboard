@@ -14,14 +14,14 @@ import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Chip from "@mui/material/Chip";
 import { tokens } from "../../theme";
 import { dashboardAppInvoices } from "../../mockDatas";
 import { IconButton } from "@mui/material";
 import { InvoiceStatus } from "../../types";
+import InvoiceListItem from "./InvoiceListItem";
 
-const StyledTableCell = styled(TableCell, {
+export const StyledTableCell = styled(TableCell, {
   shouldForwardProp: (props) => props !== "bgColor",
 })<{
   bgColor: {
@@ -43,41 +43,6 @@ const StyledTableCell = styled(TableCell, {
     fontWeight: 400,
   },
 }));
-
-const CustomStyleChip = styled(Chip, {
-  shouldForwardProp: (props) => props !== "type",
-})<{ type: InvoiceStatus }>(({ theme, type }) => ({
-  height: "24px",
-  minWidth: "22px",
-  borderRadius: "6px",
-  cursor: "default",
-  alignItems: "center",
-  whiteSpace: "nowrap",
-  display: "inline-flex",
-  justifyContent: "center",
-  textTransform: "capitalize",
-  padding: "0px 8px",
-  fontSize: "0.75rem",
-  fontWeight: "700",
-  ...(type === InvoiceStatus.inProgress
-    ? {
-        backgroundColor: "rgba(255, 171, 0, 0.16)",
-        color: "rgb(255, 214, 102)",
-      }
-    : type === InvoiceStatus.paid
-    ? {
-        color: "rgb(134, 232, 171)",
-        backgroundColor: "rgba(54, 179, 126, 0.16)",
-      }
-    : type === InvoiceStatus.outOfDate
-    ? {
-        color: "rgb(255, 172, 130)",
-        backgroundColor: "rgba(255, 86, 48, 0.16)",
-      }
-    : {}),
-}));
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({}));
 
 function createData(
   invoiceId: string,
@@ -101,11 +66,7 @@ export default function Invoice() {
   const colors = tokens(theme.palette.mode);
   return (
     <Grid item md={8}>
-      <CustomPaper
-        extraStyles={{
-          display: "block",
-        }}
-      >
+      <CustomPaper>
         <>
           <CardHeader
             title="New Invoice"
@@ -133,58 +94,12 @@ export default function Invoice() {
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <StyledTableRow key={row.invoiceId}>
-                    <StyledTableCell
-                      component="th"
-                      scope="row"
-                      bgColor={{
-                        body: colors.primary[400],
-                      }}
-                    >
-                      {row.invoiceId}
-                    </StyledTableCell>
-                    <StyledTableCell
-                      align="left"
-                      bgColor={{
-                        body: colors.primary[400],
-                      }}
-                    >
-                      {row.category}
-                    </StyledTableCell>
-                    <StyledTableCell
-                      align="left"
-                      bgColor={{
-                        body: colors.primary[400],
-                      }}
-                    >
-                      {row.price}
-                    </StyledTableCell>
-                    <StyledTableCell
-                      align="left"
-                      bgColor={{
-                        body: colors.primary[400],
-                      }}
-                    >
-                      <CustomStyleChip
-                        label={`${row.status}`}
-                        type={row.status}
-                      />
-                    </StyledTableCell>
-                    <StyledTableCell
-                      align="right"
-                      bgColor={{
-                        body: colors.primary[400],
-                      }}
-                    >
-                      <IconButton size="medium">
-                        <MoreVertIcon
-                          sx={{
-                            color: colors.grey[300],
-                          }}
-                        />
-                      </IconButton>
-                    </StyledTableCell>
-                  </StyledTableRow>
+                  <InvoiceListItem
+                    invoiceId={row.invoiceId}
+                    category={row.category}
+                    price={row.price}
+                    status={row.status}
+                  />
                 ))}
               </TableBody>
             </Table>

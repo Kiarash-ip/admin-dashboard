@@ -45,6 +45,7 @@ export default function CardComp() {
     <Grid item md={4}>
       <CustomPaper
         extraStyles={{
+          display: "flex",
           padding: "24px",
         }}
       >

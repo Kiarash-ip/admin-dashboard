@@ -144,3 +144,124 @@ export const dashboardAppInvoices = [
     title: "",
   },
 ];
+
+export const applicationListData = [
+  {
+    id: 0,
+    title: "Chrome",
+    avatar: "/images/chrome-icon.svg",
+    platform: "Mac",
+    cost: "Free",
+    rate: 3.5,
+    reviews: "34.93k",
+  },
+  {
+    id: 1,
+    title: "Drive",
+    avatar: "/images/google-drive-icon.svg",
+    platform: "Mac",
+    cost: "35.71",
+    rate: 2,
+    reviews: "76.15k",
+  },
+  {
+    id: 2,
+    title: "Dropbox",
+    avatar: "/images/dropbox-icon.svg",
+    platform: "Windows",
+    cost: "Free",
+    rate: 5,
+    reviews: "8.86k",
+  },
+  {
+    id: 3,
+    title: "Evernote",
+    avatar: "/images/evernote-icon.svg",
+    platform: "Mac",
+    cost: "93.10",
+    rate: 2,
+    reviews: "27.33k",
+  },
+  {
+    id: 4,
+    title: "Github",
+    avatar: "/images/github-icon.svg",
+    platform: "Windows",
+    cost: "Free",
+    rate: 4,
+    reviews: "85.01k",
+  },
+];
+
+export const countriesInformation = [
+  {
+    id: 0,
+    title: "Germany",
+    src: "/images/germany-icon.svg",
+    android: "19.68k",
+    windows: "20.31k",
+    mac: "20.31k",
+  },
+  {
+    id: 1,
+    title: "England",
+    src: "/images/england-icon.svg",
+    android: "19.68k",
+    windows: "20.31k",
+    mac: "20.31k",
+  },
+  {
+    id: 2,
+    title: "France",
+    src: "/images/france-icon.svg",
+    android: "19.68k",
+    windows: "20.31k",
+    mac: "20.31k",
+  },
+  {
+    id: 3,
+    title: "Korean",
+    src: "/images/korean-icon.svg",
+    android: "19.68k",
+    windows: "20.31k",
+    mac: "20.31k",
+  },
+  {
+    id: 4,
+    title: "USA",
+    src: "/images/usa-icon.svg",
+    android: "19.68k",
+    windows: "20.31k",
+    mac: "20.31k",
+  },
+];
+
+export const authorsList = [
+  {
+    id: 0,
+    avatar:
+      "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_1.jpg",
+    name: "Jayvion Simon",
+    likes: "18.26k",
+    cupColor: "rgb(118, 53, 220)",
+    cupBgColor: "rgba(118, 53, 220, 0.08)",
+  },
+  {
+    id: 1,
+    avatar:
+      "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_2.jpg",
+    name: "Lucian Obrien",
+    likes: "17.34k",
+    cupColor: "rgb(0, 184, 217)",
+    cupBgColor: "rgba(0, 184, 217, 0.08)",
+  },
+  {
+    id: 2,
+    avatar:
+      "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_3.jpg",
+    name: "Deja Brady",
+    likes: "13.75k",
+    cupColor: "rgb(255, 86, 48)",
+    cupBgColor: "rgba(255, 86, 48, 0.08)",
+  },
+];
